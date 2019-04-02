@@ -7,15 +7,17 @@
     "react"
   ],
   "globals": {
+    "require": true,
     "document": true,
     "process": true,
     "window": true,
     "console": true
   },
   "rules": {
-    "max-len": [1, 80, 2, { "ignoreComments": true }],
+    "max-len": [1, 150, 2, { "ignoreComments": true }],
     "semi": ["error", "always"],
     "quotes": ["error", "single"],
+    "no-unused-vars": ["warn"],
     "no-console": ["off"],
     "react/prop-types": ["off"]
   },

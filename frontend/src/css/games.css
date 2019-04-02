@@ -1,0 +1,82 @@
+.game-title {
+    position: absolute;
+    width: 280px;
+    height: 200px;
+}
+
+.game-title-p {
+        margin: 5px 0px;
+        color: #d02000;
+        font-size: 40px;
+        text-align: center;
+}
+.cards-panel {
+    position: absolute;
+    left: 350px;
+}
+
+.answers-panel {
+    position: absolute;
+    top: 300px;
+    left: 290px;
+}
+
+.cards-control {
+    position: absolute;
+    top: 300px;
+    left: 0px;
+}
+
+
+.card-img {
+    position: absolute;
+    width: 150px;
+}
+
+.card-symbol {
+    position: absolute;
+    top: 0px;
+    width: 80px;
+    visibility: visible;
+    display: inline-block;
+    clear: both;
+    font-size: 80px;
+    line-height: 230px;
+    white-space: nowrap;
+    text-align: center;
+    padding: 0px;
+    color: #d02000;
+}
+.card-btn {
+    position: absolute;
+    background-color: #ffdada;
+    padding: 5px 20px;
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    color: #555;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border: 1px solid rgba(27,31,35,.2);
+    border-radius: .25em;
+    cursor: pointer;
+    display: inline-block;
+    background-image: linear-gradient(-180deg,#fbefef,#fbe8e8 90%);
+}
+
+.card-btn:hover {
+    background-color: #e6ebf1;
+    background-image: linear-gradient(-180deg,#ffdada,#fed1d1 90%);
+    background-position: -.5em;
+    border-color: rgba(27,31,35,.35);
+}
+
+.new-game-btn {
+    left: 60px;
+    top: 20px;
+}
+
+.answer-btn {
+    left: 60px;
+    top: 80px;
+}

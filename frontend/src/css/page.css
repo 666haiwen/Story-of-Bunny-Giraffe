@@ -1,0 +1,83 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    margin: 0px;
+    background: #fffbfb;
+}
+
+a:not(:hover) {
+    text-decoration: none;
+  }
+
+.blank-box {
+    border: 3px;
+    margin-bottom: 10px;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 2px;
+    box-shadow: 0px 0px 3px rgba(26,26,26,.2);
+    box-sizing: border-box;
+}
+
+.page-title {
+    margin: auto;
+    position: absolute;
+    height: 180px;
+    width: 100%;
+}
+
+.page-main {
+    position: absolute;
+    top: 200px;
+    margin: 10px 0px;
+    width: 99%;
+}
+
+.page-footer {
+    margin: 10px 0px 0px 0px;
+    height: 50px;
+    background: black;
+}
+
+.nav-link {
+    color: steelblue;
+    margin-left: 1em;
+    font-size: large;
+}
+
+.nav-link-selected {
+    color: steelblue;
+    margin-left: 1em;
+    font: bold;
+}
+
+.home-title {
+    position: absolute;
+    left: 30%;
+}
+.home-h1 {
+    color: #555;
+    font-size: 48px;
+    font-weight: 200;
+    letter-spacing: -2px;
+    white-space: nowrap;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.title-right {
+    position: absolute;
+    top: -20px;
+    right: 0px;
+    width: 250px;
+}
+
+.title-left {
+    position: absolute;
+    width: 250px;
+    top: 20px;
+    left: 0px;
+}

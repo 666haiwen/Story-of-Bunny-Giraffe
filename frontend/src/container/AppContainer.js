@@ -1,0 +1,37 @@
+import React from 'react';
+// import ReactDOM from 'react-dom';
+import { connect } from 'react-redux';
+import {BrowserRouter, Route } from 'react-router-dom';
+import NavContainer from './NavContainer';
+import Images from '../components/Images';
+import Articles from '../components/Articles';
+import Other from '../components/Other';
+import GamesContainer from './GamesContainer';
+import Footer from '../components/Footer';
+
+class App extends React.Component {
+  render() {
+    console.log(this.props);
+    return (
+      <div id="app">
+        <BrowserRouter>
+          <div id="main" style={{'height': this.props.mainHeight}}>
+            <NavContainer />
+            <Route path="/images" component={Images} />
+            <Route path="/games" component={GamesContainer} />
+            <Route path="/about" component={Articles} />
+            <Route path="/contact" component={Other} />
+          </div>
+        </BrowserRouter>
+        <Footer />
+      </div>
+    );
+  }
+}
+
+const mapStateToProps = (state) => ({
+  mainHeight: state.main.height,
+});
+const AppContainer = connect(mapStateToProps)(App);
+export default AppContainer;
+

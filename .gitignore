@@ -1,9 +1,10 @@
 .vscode
 node_modules
+img
 
 #frontend
 frontend/dist
-
+# frontend/src/img
 #backend
 __pycache__
 backend/migrations

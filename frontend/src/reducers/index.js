@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
+import page from './page';
+import main from './main';
 
-const test = () => 'hello world';
 export default combineReducers({
-  test
+  main,
+  page,
 });
