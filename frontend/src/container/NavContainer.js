@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import '../css/page.css';
 import titleRight from '../img/title-right.png';
 import titleLeft from '../img/title-left.jpg';
 
@@ -11,7 +10,7 @@ class Nav extends React.Component {
       return (
         <div className='page-title blank-box'>
           <header className='home-title'>
-            <a href="./" className='nav-link'>Home</a>
+            <Link to="/" className='nav-link'>Home</Link>
             <Link to="/images" className='nav-link'>Images</Link>
             <Link to="/games" className='nav-link'>Games</Link>
             <Link replace to="/contact" className='nav-link'>Contact</Link>

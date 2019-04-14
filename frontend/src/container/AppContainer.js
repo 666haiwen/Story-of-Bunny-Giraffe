@@ -1,5 +1,4 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import {BrowserRouter, Route } from 'react-router-dom';
 import NavContainer from './NavContainer';
@@ -8,15 +7,16 @@ import Articles from '../components/Articles';
 import Other from '../components/Other';
 import GamesContainer from './GamesContainer';
 import Footer from '../components/Footer';
+import Home from '../components/Home';
 
 class App extends React.Component {
   render() {
-    console.log(this.props);
     return (
       <div id="app">
         <BrowserRouter>
           <div id="main" style={{'height': this.props.mainHeight}}>
             <NavContainer />
+            <Route path="/" component={Home} />
             <Route path="/images" component={Images} />
             <Route path="/games" component={GamesContainer} />
             <Route path="/about" component={Articles} />

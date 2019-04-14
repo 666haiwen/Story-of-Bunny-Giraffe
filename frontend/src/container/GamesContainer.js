@@ -1,7 +1,6 @@
 import React from 'react';
 import * as actions from '../actions';
 import { connect } from 'react-redux';
-import '../css/games.css';
 import {GAMES_CONST, MAIN} from '../const';
 
 class Games extends React.Component {

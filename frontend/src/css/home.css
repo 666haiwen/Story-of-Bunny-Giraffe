@@ -1,0 +1,59 @@
+.days-title {
+    position: absolute;
+    left:25%;
+    width: 50%;
+    color: #dd8500;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+
+.days-panel{
+}
+
+.days-main {
+    position: absolute;
+    left: 30%;
+    top: 120px;
+    width: 620px;
+    height: 320px;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 0 2px rgba(0,0,0,.3), 0 4px 8px rgba(0,0,0,.3);
+    box-sizing: initial;
+    font-family: Menlo;
+    background-color: #fff;
+}
+
+.days-bottom {
+    height: 2px;
+    background: #dd8500;
+}
+
+.panel-bottom {
+    position: absolute;
+    left: 15%;
+    width: 70%;
+    top: 480px;
+}
+
+.custom-title {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    display: table;
+    text-align: center;
+    width: 100%;
+    pointer-events: none;
+    color: #fff;
+}
+
+.days-image {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+}

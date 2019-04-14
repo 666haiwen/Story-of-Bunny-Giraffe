@@ -3,12 +3,14 @@ import { Provider } from 'react-redux';
 import { Route, BrowserRouter } from 'react-router-dom';
 import AppContainer from '../container/AppContainer';
 import PropTypes from 'prop-types';
+import '../css/page.css';
+import '../css/home.css';
+import '../css/games.css';
+
 
 const Root = ({ store }) => (
   <Provider store={store}>
-    <BrowserRouter>
-      <Route path='/' component={AppContainer} />
-    </BrowserRouter>
+    <AppContainer />
   </Provider>
 );
 
