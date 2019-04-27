@@ -26,33 +26,42 @@
     top: 500px;
     width: 900px;
 }
+
 .days-candidate {
     width: 200px;
     height: 200px;
-    padding: 0 20px;
+    margin: 0 20px;
+    float: left;
+}
+
+.days-candidate-content {
+    position: absolute;
+    width: 200px;
+    height: 200px;
     border-radius: 2px;
     box-shadow: 0 0 2px rgba(0,0,0,.3), 0 4px 8px rgba(0,0,0,.3);
     box-sizing: initial;
     font-family: Menlo;
+    transition: all 0.5s ease;
 }
 
-.days-candidate::before{
+.days-candidate-border {
+    opacity: 0.3;
+    border: 1px solid #fff;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 30 ")";
+    filter: alpha(opacity=30);
     position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    opacity: 0.4;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 40 ")";
-    filter: alpha(opacity=40);
     top: 0;
     left: 0;
-    background-color: #FFF2F2;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
+    bottom: 0;
+    right: 0;
+    margin: 10px 10px;
+    cursor: pointer;
 }
 
+.days-candidate-border:hover {
+    opacity: 0.7;
+}
 .days-bottom {
     height: 2px;
     background: #dd8500;
@@ -78,6 +87,11 @@
     width: 100%;
     pointer-events: none;
     color: #fff;
+}
+
+.candidate-title {
+    opacity: 0.0;
+    transition: all 0.5s ease;
 }
 
 .days-image {

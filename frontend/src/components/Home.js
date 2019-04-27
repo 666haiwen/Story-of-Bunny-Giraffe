@@ -1,5 +1,8 @@
 import React from 'react';
-import {ANN_TIME, HOME_CONST} from '../const';
+import * as actions from '../actions';
+import * as d3 from 'd3';
+import { connect } from 'react-redux';
+import {ANN_TIME, HOME_CONST, MAIN} from '../const';
 import {getDay} from '../api/utils';
 
 class Home extends React.Component {
@@ -9,6 +12,7 @@ class Home extends React.Component {
       this.state = {
         current: current,
         Anniversary: anniversary,
+        showId: -1,
       };
       this.timeInterval = setInterval(() => {
         const {current, anniversary} = this.timeUpdate();
@@ -18,6 +22,12 @@ class Home extends React.Component {
           Anniversary: anniversary,
         });
       }, 1000);
+      this.props.setMainHeight(HOME_CONST.HEIGHT + MAIN.TOP);
+      this.fixCurrent = false;
+    }
+
+    componentDidMount() {
+      this.titles = d3.selectAll('.candidate-title');
     }
 
     timeUpdate() {
@@ -31,11 +41,26 @@ class Home extends React.Component {
         current = 1;
       else if (anniversary[2].days % 10 == 0)
         current = 2;
+      if (this.fixCurrent == true) {
+        current = this.state.current;
+      }
       return {current: current, anniversary: anniversary};
     }
 
+    setShowId(id) {
+      d3.selectAll('.candidate-title').style('opacity', 0.0);
+      d3.select('#candidate-title-' + id).style('opacity', 1.0);
+    }
+
+    titleClick(id) {
+      this.fixCurrent = true;
+      this.setState({
+        ...this.state,
+        current: id
+      });
+    }
+
     render() {
-      console.log(this.state);
       const day = this.state.Anniversary[this.state.current];
       const mainBackground = HOME_CONST.COLOR[this.state.current];
       const anniversaryList = [];
@@ -43,7 +68,19 @@ class Home extends React.Component {
         if (i != this.state.current) {
           anniversaryList.push(
             <div className='days-candidate' key={i}>
-              {v.name + ' Days'}
+              <div className='days-candidate-content' style={{background: HOME_CONST.COLOR[i]}}>
+                <div className='days-candidate-border' 
+                  onMouseEnter={() => this.setShowId(i)} 
+                  onMouseLeave={() => this.setShowId(-1)}
+                  onClick={() => this.titleClick(i)}>
+                </div>
+                <div className='custom-title'>
+                  <h3><span style={{fontSize: 18}}>{v.name}</span></h3>
+                  <h3 className='candidate-title' id={'candidate-title-' + i}>
+                    <span style={{fontSize: 18}}>{v.days + ' Days'}</span>
+                  </h3>
+                </div>
+              </div>
             </div>
           );
         }
@@ -59,14 +96,14 @@ class Home extends React.Component {
               <h1><span style={{fontSize: 48}}>{day.days + ' Days'}</span></h1>
             </div>
           </div>
-          {/* <div className='days-list'>
+          <div className='days-list'>
             {anniversaryList.map(v => v)}
-          </div> */}
+          </div>
           <div className='days-bottom panel-bottom' />
         </div>
       );
     }
   }
 
-export default Home;
-  
+const HomeContainer = connect(null, actions)(Home);
+export default HomeContainer;

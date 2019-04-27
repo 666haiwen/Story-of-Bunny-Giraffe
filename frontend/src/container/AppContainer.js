@@ -16,7 +16,7 @@ class App extends React.Component {
         <BrowserRouter>
           <div id="main" style={{'height': this.props.mainHeight}}>
             <NavContainer />
-            <Route path="/" component={Home} />
+            <Route path="/home" component={Home} />
             <Route path="/images" component={Images} />
             <Route path="/games" component={GamesContainer} />
             <Route path="/about" component={Articles} />

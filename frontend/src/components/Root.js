@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { Route, BrowserRouter } from 'react-router-dom';
+// import { Route, BrowserRouter } from 'react-router-dom';
 import AppContainer from '../container/AppContainer';
 import PropTypes from 'prop-types';
 import '../css/page.css';

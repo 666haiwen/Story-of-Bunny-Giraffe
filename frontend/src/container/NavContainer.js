@@ -10,7 +10,7 @@ class Nav extends React.Component {
       return (
         <div className='page-title blank-box'>
           <header className='home-title'>
-            <Link to="/" className='nav-link'>Home</Link>
+            <Link to="/home" className='nav-link'>Home</Link>
             <Link to="/images" className='nav-link'>Images</Link>
             <Link to="/games" className='nav-link'>Games</Link>
             <Link replace to="/contact" className='nav-link'>Contact</Link>
