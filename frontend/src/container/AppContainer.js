@@ -7,7 +7,7 @@ import Articles from '../components/Articles';
 import Other from '../components/Other';
 import GamesContainer from './GamesContainer';
 import Footer from '../components/Footer';
-import Home from '../components/Home';
+import HomeContainer from './HomeContainer';
 
 class App extends React.Component {
   render() {
@@ -16,11 +16,11 @@ class App extends React.Component {
         <BrowserRouter>
           <div id="main" style={{'height': this.props.mainHeight}}>
             <NavContainer />
-            <Route path="/home" component={Home} />
             <Route path="/images" component={Images} />
             <Route path="/games" component={GamesContainer} />
             <Route path="/about" component={Articles} />
             <Route path="/contact" component={Other} />
+            <Route path="/" component={HomeContainer} />
           </div>
         </BrowserRouter>
         <Footer />
