@@ -20,7 +20,7 @@ class App extends React.Component {
             <Route path="/games" component={GamesContainer} />
             <Route path="/about" component={Articles} />
             <Route path="/contact" component={Other} />
-            <Route path="/" component={HomeContainer} />
+            <Route path="/" exact component={HomeContainer} />
           </div>
         </BrowserRouter>
         <Footer />
