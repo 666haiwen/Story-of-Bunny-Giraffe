@@ -11,7 +11,8 @@
     "document": true,
     "process": true,
     "window": true,
-    "console": true
+    "console": true,
+    "setInterval": true
   },
   "rules": {
     "max-len": [1, 150, 2, { "ignoreComments": true }],
